@@ -84,6 +84,8 @@ const About = () => {
                                         "Backend Developer",
                                         "Software Engineer",
                                         "AI Engineer",
+                                        "Web Developer",
+                                        "Problem Solver",
                                     ]}
                                     speed={100}
                                     eraseSpeed={50}
@@ -147,7 +149,7 @@ const About = () => {
                         {/* Social Media Icons */}
                         <div className="flex space-x-4">
                             <a
-                                href="mailto:your-email@example.com"
+                                href="mailto:mdmahirasef.dev@gmail.com"
                                 className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-200 group"
                             >
                                 <Mail className="w-5 h-5 text-gray-300 group-hover:text-white" />
