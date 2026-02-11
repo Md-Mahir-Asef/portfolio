@@ -1,6 +1,7 @@
 import Header from "../sections/Header";
 import About from "../sections/About";
 import Projects from "../sections/Projects";
+import Skills from "../sections/Skills";
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <Header />
             <About />
             <Projects />
+            <Skills />
         </div>
     );
 };
