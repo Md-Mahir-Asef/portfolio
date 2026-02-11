@@ -163,10 +163,10 @@ const About = () => {
                         </div>
 
                         {/* Social Media Icons */}
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-4 mt-10">
                             <a
                                 href="mailto:mdmahirasef.dev@gmail.com"
-                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group"
+                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group border border-white"
                             >
                                 <Mail className="w-5 h-5 text-white" />
                             </a>
@@ -174,7 +174,7 @@ const About = () => {
                                 href="https://linkedin.com/in/your-profile"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group"
+                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group border border-white"
                             >
                                 <Linkedin className="w-5 h-5 text-white" />
                             </a>
@@ -182,7 +182,7 @@ const About = () => {
                                 href="https://github.com/your-username"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group"
+                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group border border-white"
                             >
                                 <Github className="w-5 h-5 text-white" />
                             </a>
@@ -190,7 +190,7 @@ const About = () => {
                                 href="https://twitter.com/your-username"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group"
+                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group border border-white"
                             >
                                 <img
                                     src="/images/x-white.png"
