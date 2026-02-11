@@ -81,10 +81,10 @@ const Header = () => {
                         </div>
                     )}
                 </nav>
-            </header>
 
             {/* White Divider */}
             <div className="h-[0.5px] bg-gray-700"></div>
+            </header>
         </>
     );
 };
