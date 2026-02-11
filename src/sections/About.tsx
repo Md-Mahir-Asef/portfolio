@@ -1,4 +1,73 @@
+import { useState, useEffect } from "react";
 import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+
+const TypingEffect = ({
+    texts,
+    speed = 100,
+    eraseSpeed = 50,
+    typingDelay = 500,
+    eraseDelay = 2000,
+}: {
+    texts: string[];
+    speed?: number;
+    eraseSpeed?: number;
+    typingDelay?: number;
+    eraseDelay?: number;
+}) => {
+    const [textIndex, setTextIndex] = useState(0);
+    const [charIndex, setCharIndex] = useState(0);
+    const [isTyping, setIsTyping] = useState(true);
+    const [displayText, setDisplayText] = useState("");
+
+    useEffect(() => {
+        const currentText = texts[textIndex];
+
+        if (isTyping) {
+            if (charIndex < currentText.length) {
+                const timeout = setTimeout(() => {
+                    setDisplayText((prev) => prev + currentText[charIndex]);
+                    setCharIndex((prev) => prev + 1);
+                }, speed);
+                return () => clearTimeout(timeout);
+            } else {
+                const timeout = setTimeout(() => {
+                    setIsTyping(false);
+                }, eraseDelay);
+                return () => clearTimeout(timeout);
+            }
+        } else {
+            if (charIndex > 0) {
+                const timeout = setTimeout(() => {
+                    setDisplayText((prev) => prev.slice(0, -1));
+                    setCharIndex((prev) => prev - 1);
+                }, eraseSpeed);
+                return () => clearTimeout(timeout);
+            } else {
+                const timeout = setTimeout(() => {
+                    setTextIndex((prev) => (prev + 1) % texts.length);
+                    setIsTyping(true);
+                }, typingDelay);
+                return () => clearTimeout(timeout);
+            }
+        }
+    }, [
+        charIndex,
+        isTyping,
+        textIndex,
+        texts,
+        speed,
+        eraseSpeed,
+        typingDelay,
+        eraseDelay,
+    ]);
+
+    return (
+        <span>
+            {displayText}
+            <span className="animate-pulse">|</span>
+        </span>
+    );
+};
 
 const About = () => {
     return (
@@ -9,7 +78,18 @@ const About = () => {
                     <div className="space-y-6">
                         <h2 className="text-4xl md:text-5xl font-bold">
                             <span className="bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                                Full Stack Developer
+                                <TypingEffect
+                                    texts={[
+                                        "Full Stack Developer",
+                                        "Backend Developer",
+                                        "Software Engineer",
+                                        "AI Engineer",
+                                    ]}
+                                    speed={100}
+                                    eraseSpeed={50}
+                                    typingDelay={500}
+                                    eraseDelay={2000}
+                                />
                             </span>
                         </h2>
 
