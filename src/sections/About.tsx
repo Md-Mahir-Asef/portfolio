@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const TypingEffect = ({
     texts,
@@ -97,27 +97,32 @@ const About = () => {
 
                         <div className="space-y-4 text-gray-300 text-lg">
                             <p>
-                                I am a passionate full-stack developer with
-                                expertise in building modern web applications. I
-                                love turning complex problems into simple,
-                                beautiful, and intuitive solutions.
+                                I’m a backend-focused full-stack engineer
+                                passionate about building clean, maintainable,
+                                and production-ready web applications. I
+                                specialize in TypeScript, Node.js, and
+                                PostgreSQL, creating efficient APIs and
+                                designing scalable, secure database systems.
+                                Every project I build balances performance with
+                                long-term maintainability.
                             </p>
 
                             <p>
-                                With a strong foundation in both frontend and
-                                backend technologies, I create seamless user
-                                experiences backed by robust and scalable
-                                architectures. My goal is to bridge the gap
-                                between design and functionality.
+                                I approach development with strong computer
+                                science fundamentals, including data structures,
+                                algorithms, and system design. I focus on
+                                real-world problem-solving and making trade-offs
+                                that matter in production, ensuring code is not
+                                just functional but robust and efficient.
                             </p>
 
                             <p>
-                                I am constantly learning and exploring new
-                                technologies to stay updated with the latest
-                                trends in web development. When I'm not coding,
-                                you can find me contributing to open-source
-                                projects or sharing my knowledge with the
-                                developer community.
+                                My portfolio showcases projects that reflect
+                                these principles. From backend-heavy
+                                applications to full-stack systems, I strive to
+                                ship solutions that are production-ready from
+                                day one, continuously improving my skills and
+                                delivering value with every line of code.
                             </p>
                         </div>
                     </div>
@@ -126,6 +131,17 @@ const About = () => {
                     <div className="flex flex-col items-center space-y-6">
                         {/* Image Container */}
                         <div className="relative">
+                            {/* Colorful glowing shadow */}
+                            <div className="absolute -inset-4 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg opacity-30 blur-xl animate-pulse"></div>
+                            <div
+                                className="absolute -inset-8 bg-linear-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-lg opacity-20 blur-2xl animate-pulse"
+                                style={{ animationDelay: "1s" }}
+                            ></div>
+                            <div
+                                className="absolute -inset-12 bg-linear-to-r from-purple-400 via-pink-500 to-red-500 rounded-lg opacity-10 blur-3xl animate-pulse"
+                                style={{ animationDelay: "2s" }}
+                            ></div>
+
                             {/* Decorative border with dots */}
                             <div className="absolute -inset-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg opacity-20"></div>
                             <div className="absolute -inset-0.5 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg opacity-10"></div>
@@ -150,33 +166,37 @@ const About = () => {
                         <div className="flex space-x-4">
                             <a
                                 href="mailto:mdmahirasef.dev@gmail.com"
-                                className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-200 group"
+                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group"
                             >
-                                <Mail className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                                <Mail className="w-5 h-5 text-white" />
                             </a>
                             <a
                                 href="https://linkedin.com/in/your-profile"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-200 group"
+                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group"
                             >
-                                <Linkedin className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                                <Linkedin className="w-5 h-5 text-white" />
                             </a>
                             <a
                                 href="https://github.com/your-username"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-200 group"
+                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group"
                             >
-                                <Github className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                                <Github className="w-5 h-5 text-white" />
                             </a>
                             <a
                                 href="https://twitter.com/your-username"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-200 group"
+                                className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group"
                             >
-                                <Twitter className="w-5 h-5 text-gray-300 group-hover:text-white" />
+                                <img
+                                    src="/images/x-white.png"
+                                    alt="X"
+                                    className="w-5 h-5 text-white"
+                                />
                             </a>
                         </div>
                     </div>
