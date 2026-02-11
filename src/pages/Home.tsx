@@ -1,9 +1,12 @@
-const Home = () => {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  )
-}
+import Header from "../sections/Header";
 
-export default Home
+const Home = () => {
+    return (
+        <div>
+            <Header />
+            <h1>Home</h1>
+        </div>
+    );
+};
+
+export default Home;

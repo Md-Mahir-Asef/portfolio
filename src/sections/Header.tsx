@@ -10,7 +10,7 @@ const Header = () => {
         { name: "Skills", href: "#skills" },
         { name: "Education", href: "#education" },
         { name: "Contact", href: "#contact" },
-        { name: "Resume", href: "#resume" },
+        { name: "Resume", href: "#resume", isOutlined: true },
     ];
 
     return (
@@ -19,9 +19,7 @@ const Header = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo/Name */}
                     <div className="shrink-0">
-                        <h1 className="text-xl font-bold">
-                            Md. Mahir Asef
-                        </h1>
+                        <h1 className="text-xl font-bold">Md. Mahir Asef</h1>
                     </div>
 
                     {/* Desktop Navigation */}
@@ -31,7 +29,11 @@ const Header = () => {
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                                    className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                                        item.isOutlined
+                                            ? "border border-gray-300 hover:border-white"
+                                            : ""
+                                    }`}
                                 >
                                     {item.name}
                                 </a>
@@ -62,7 +64,11 @@ const Header = () => {
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                    className={`text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${
+                                        item.isOutlined
+                                            ? "border border-gray-300 hover:border-white"
+                                            : ""
+                                    }`}
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {item.name}
