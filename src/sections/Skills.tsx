@@ -1,12 +1,12 @@
 const Skills = () => {
     const skillsData = [
         {
-            category: "Programming Languages",
+            category: "Core Programming Languages",
             skills: [
                 { name: "JavaScript", image: "javascript.png" },
                 { name: "TypeScript", image: "typescript.png" },
-                { name: "SQL", image: "sql.png" },
                 { name: "Python", image: "python.png" },
+                { name: "SQL", image: "sql.png" },
                 { name: "Bash", image: "bash.png" },
             ],
         },
@@ -18,7 +18,7 @@ const Skills = () => {
                 { name: "Express", image: "express.png" },
                 { name: "JWT Authentication", image: "jwt.png" },
                 { name: "RBAC Access Control", image: "rbac.png" },
-                { name: "Redis (Caching)", image: "redis.png" },
+                { name: "Winston Logger", image: "winston.png" },
             ],
         },
         {
@@ -29,9 +29,9 @@ const Skills = () => {
                 { name: "CSS3", image: "css.png" },
                 { name: "Tailwind CSS", image: "tailwindcss.png" },
                 { name: "Shadcn UI", image: "shadcn.png" },
-                { name: "Axios", image: "axios.png" },
                 { name: "React Router DOM", image: "react-router.png" },
                 { name: "Vite", image: "vite.png" },
+                { name: "Next.js", image: "nextjs.png" },
             ],
         },
         {
@@ -45,37 +45,25 @@ const Skills = () => {
             ],
         },
         {
-            category: "Frameworks & Libraries",
-            skills: [
-                { name: "Next.js", image: "nextjs.png" },
-                { name: "Zod", image: "zod.png" },
-                { name: "Winston Logger", image: "winston.png" },
-            ],
-        },
-        {
-            category: "Cloud & DevOps Technologies",
+            category: "DevOps & Testing",
             skills: [
                 { name: "Docker", image: "docker.png" },
                 { name: "Docker Compose", image: "compose.png" },
                 { name: "Logging", image: "logging.png" },
-                { name: "GitHub Actions", image: "github-actions.png" },
-            ],
-        },
-        {
-            category: "AI & Automation Skills",
-            skills: [
-                { name: "ChatGPT", image: "chatgpt.png" },
-                { name: "Cursor AI", image: "cursor.png" },
-                { name: "Prompt Engineering", image: "prompt.png" },
-            ],
-        },
-        {
-            category: "Testing",
-            skills: [
                 { name: "Postman", image: "postman.png" },
                 { name: "Unit Testing", image: "unit-testing.png" },
                 { name: "Jest", image: "jest.png" },
-                { name: "React Testing Library", image: "rtl.png" },
+            ],
+        },
+        {
+            category: "Developer Tools and AI",
+            skills: [
+                { name: "Git", image: "git.png" },
+                { name: "ChatGPT", image: "chatgpt.png" },
+                { name: "Cursor AI", image: "cursor.png" },
+                { name: "VS Code", image: "vscode.png" },
+                { name: "Prompt Engineering", image: "prompt.png" },
+                { name: "GitHub", image: "github.png" },
             ],
         },
         {
@@ -84,14 +72,6 @@ const Skills = () => {
                 { name: "Windows", image: "windows.png" },
                 { name: "Linux", image: "linux.png" },
                 { name: "Ubuntu", image: "ubuntu.png" },
-            ],
-        },
-        {
-            category: "Developer Tools",
-            skills: [
-                { name: "Git", image: "git.png" },
-                { name: "GitHub", image: "github.png" },
-                { name: "VS Code", image: "vscode.png" },
             ],
         },
         {
