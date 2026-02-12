@@ -160,7 +160,7 @@ const Skills = () => {
                                                 className="flex flex-col items-center space-y-2"
                                             >
                                                 {/* Skill Icon */}
-                                                <div className="w-12 h-12 bg-[#2A2A2A] border border-[#444444] rounded-lg flex items-center justify-center p-2">
+                                                <div className="w-12 h-12 bg-[#2A2A2A] border border-[#444444] rounded-lg flex items-center justify-center p-2 hover:rotate-360 transition-transform duration-500 ease-in-out">
                                                     <img
                                                         src={`/images/${skill.image}`}
                                                         alt={skill.name}
