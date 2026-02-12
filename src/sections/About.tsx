@@ -71,7 +71,10 @@ const TypingEffect = ({
 
 const About = () => {
     return (
-        <section className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8 scroll-reveal">
+        <section
+            id="about"
+            className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8 scroll-reveal"
+        >
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Column - Text Content */}
