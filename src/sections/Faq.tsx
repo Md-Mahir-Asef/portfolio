@@ -17,49 +17,37 @@ const Faq = () => {
             ],
         },
         {
-            question: "Do you work with existing messy codebases?",
-            answer: "You can reach me through multiple channels: email at mdmahirasef.dev@gmail.com, LinkedIn at linkedin.com/in/md-mahir-asef-dev, GitHub at github.com/Md-Mahir-Asef, or Twitter/X at @MdMahirAsef. I'm always open to discussing new opportunities and collaborations.",
+            question: "Can you work with an existing messy codebase?",
+            answer: "Yes. Most real-world projects aren’t perfect — and that’s okay. <br/><br/>I start by auditing the codebase to understand structure, dependencies, and risk areas. Then I refactor incrementally while delivering features, so progress doesn’t stop. <br/><br/>My goal isn’t to rewrite everything — it’s to stabilize, clean, and improve without breaking what already works.",
         },
         {
-            question: "Do you work on freelance projects?",
-            answer: "Yes, I'm available for freelance projects and consulting work. I particularly enjoy projects that involve complex backend systems, API design, database architecture, or full-stack applications. Feel free to reach out with your project details.",
+            question: "How do you ensure performance and scalability?",
+            answer: "I design systems with growth in mind from day one. <br/><br/>That means proper database design, optimized queries, caching where needed, and clean API structure. I also avoid over-engineering — you get a solution that fits your current scale but won’t collapse when traffic grows. <br/><br/>Performance isn’t an afterthought. It’s built into the architecture.",
+        },
+        {
+            question: "What is your communication and update process?",
+            answer: "Clear, structured, and predictable. <br/><br/> We define scope and milestones upfront. I provide regular updates, share progress demos when needed, and raise risks early instead of hiding them. <br/><br/>You’ll always know:",
             bulletPoints: [
-                "Backend system development and optimization",
-                "API design and implementation",
-                "Database architecture and scaling",
-                "Full-stack application development",
-                "Technical consulting and code reviews",
+                "What’s done",
+                "What’s next",
+                "If anything needs your input",
             ],
         },
         {
-            question: "What's your typical development process?",
-            answer: "My development process emphasizes quality, maintainability, and production readiness. I believe in building robust solutions that stand the test of time.",
+            question: "How do you handle deadlines?",
+            answer: "I treat deadlines as commitments.<br/><br/>At the start of the project, we break the work into clear milestones with realistic timelines. I avoid overpromising and instead focus on predictable delivery.<br/><br/>You’ll receive regular progress updates, and if any risk appears, I communicate it early.",
         },
         {
-            question:
-                "Can you help with both frontend and backend development?",
-            answer: "Absolutely! While I'm backend-focused, I'm a full-stack developer comfortable with both frontend and backend technologies. I can handle everything from database design and API development to responsive frontend interfaces and deployment strategies.",
-            bulletPoints: [
-                "Frontend: React, Vue.js, TypeScript, responsive design",
-                "Backend: Node.js, Express, PostgreSQL, MongoDB",
-                "DevOps: Docker, CI/CD, cloud deployment",
-                "Integration: RESTful APIs, GraphQL, WebSocket connections",
-            ],
+            question: "How do you handle changes in project scope?",
+            answer: "Changes are normal — growth often brings new ideas.<br/><br/>When scope changes, I first evaluate the impact on timeline and complexity. Then I clearly communicate what adjustments are needed (time, cost, or both) before moving forward.<br/><br/>Nothing moves without alignment.<br/><br/>This keeps the project structured and prevents confusion or hidden work.",
         },
         {
-            question: "How do you approach learning new technologies?",
-            answer: "I approach learning through hands-on projects and practical application. I focus on understanding fundamental concepts before diving into specific frameworks. I believe in continuous learning and staying updated with industry trends while maintaining strong computer science fundamentals.",
+            question: "What happens after project delivery?",
+            answer: "Delivery isn’t the end — it’s the transition phase.<br/><br/>After launch, I ensure everything is stable, properly documented, and easy for your team to maintain. If needed, I provide short-term post-launch support to handle bug fixes or adjustments.<br/><br/>If you require ongoing maintenance or feature expansion, we can define a structured support plan.",
         },
         {
-            question: "What makes you different from other developers?",
-            answer: "I combine strong computer science fundamentals with practical production experience. I focus on building maintainable, scalable solutions rather than just functional code. I understand system design, database architecture, and the importance of writing code that lasts in production environments.",
-            bulletPoints: [
-                "Deep understanding of data structures and algorithms",
-                "Production-focused development approach",
-                "Emphasis on code maintainability and scalability",
-                "Strong system design and architecture skills",
-                "Commitment to writing documentation and tests",
-            ],
+            question: "Do you sign NDAs?",
+            answer: "Yes. I fully respect confidentiality and intellectual property. <br/><br/>If your project requires an NDA, I’m comfortable signing one before reviewing sensitive details.",
         },
     ];
 
@@ -129,7 +117,12 @@ const Faq = () => {
                                     }`}
                                 >
                                     <div className="px-6 pb-4 text-gray-300 leading-relaxed">
-                                        <p className="mb-3">{item.answer}</p>
+                                        <div
+                                            className="mb-3"
+                                            dangerouslySetInnerHTML={{
+                                                __html: item.answer,
+                                            }}
+                                        />
                                         {item.bulletPoints && (
                                             <ul className="list-disc list-inside space-y-2 ml-2">
                                                 {item.bulletPoints.map(
@@ -141,7 +134,11 @@ const Faq = () => {
                                                             <span className="text-blue-400 mr-2">
                                                                 •
                                                             </span>
-                                                            <span>{point}</span>
+                                                            <span
+                                                                dangerouslySetInnerHTML={{
+                                                                    __html: point,
+                                                                }}
+                                                            />
                                                         </li>
                                                     ),
                                                 )}
