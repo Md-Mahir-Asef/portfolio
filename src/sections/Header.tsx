@@ -19,7 +19,12 @@ const Header = () => {
                 <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         {/* Logo/Name */}
-                        <div className="shrink-0">
+                        <div className="shrink-0 flex flex-row gap-2">
+                            <img
+                                src="/images/logo-no-bg.png"
+                                alt="Logo"
+                                width={30}
+                            />
                             <h1 className="text-xl font-bold">
                                 Md. Mahir Asef
                             </h1>
@@ -82,8 +87,8 @@ const Header = () => {
                     )}
                 </nav>
 
-            {/* White Divider */}
-            <div className="h-[0.5px] bg-gray-700"></div>
+                {/* White Divider */}
+                <div className="h-[0.5px] bg-gray-700"></div>
             </header>
         </>
     );
