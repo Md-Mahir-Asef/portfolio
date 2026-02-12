@@ -7,24 +7,44 @@ const Faq = () => {
     const faqData = [
         {
             question: "How do you approach a new project?",
-            answer: "I specialize in TypeScript, Node.js, React, and PostgreSQL for backend development. I also work extensively with frontend frameworks like React and Vue.js, and have experience with cloud deployment, database design, and API development.",
+            answer: "I start with clarity, define constraints, design for scale, then execute in iterations. <br />Here’s the breakdown:",
+            bulletPoints: [
+                "<b>Requirement Deep Dive –</b> I clarify business goals, user flows, edge cases, and constraints (budget, timeline, scalability expectations). No assumptions.",
+                "<b>System Design First –</b> I outline architecture, database schema, API contracts, and security strategy before writing real code.",
+                "<b>Incremental Execution –</b> I build in small, testable modules with clean commits and version control discipline.",
+                "<b>Performance & Security Mindset –</b> Input validation, indexing strategy, proper auth, and scalability considerations are built-in — not afterthoughts.",
+                "<b>Feedback Loop –</b> I ship early iterations, gather feedback, refine fast.",
+            ],
         },
         {
-            question: "How can I contact you for project collaboration?",
+            question: "Do you work with existing messy codebases?",
             answer: "You can reach me through multiple channels: email at mdmahirasef.dev@gmail.com, LinkedIn at linkedin.com/in/md-mahir-asef-dev, GitHub at github.com/Md-Mahir-Asef, or Twitter/X at @MdMahirAsef. I'm always open to discussing new opportunities and collaborations.",
         },
         {
             question: "Do you work on freelance projects?",
             answer: "Yes, I'm available for freelance projects and consulting work. I particularly enjoy projects that involve complex backend systems, API design, database architecture, or full-stack applications. Feel free to reach out with your project details.",
+            bulletPoints: [
+                "Backend system development and optimization",
+                "API design and implementation",
+                "Database architecture and scaling",
+                "Full-stack application development",
+                "Technical consulting and code reviews",
+            ],
         },
         {
             question: "What's your typical development process?",
-            answer: "My development process starts with understanding requirements and system design, followed by iterative development with regular feedback. I prioritize clean code, comprehensive testing, and documentation. I believe in building production-ready applications from day one.",
+            answer: "My development process emphasizes quality, maintainability, and production readiness. I believe in building robust solutions that stand the test of time.",
         },
         {
             question:
                 "Can you help with both frontend and backend development?",
             answer: "Absolutely! While I'm backend-focused, I'm a full-stack developer comfortable with both frontend and backend technologies. I can handle everything from database design and API development to responsive frontend interfaces and deployment strategies.",
+            bulletPoints: [
+                "Frontend: React, Vue.js, TypeScript, responsive design",
+                "Backend: Node.js, Express, PostgreSQL, MongoDB",
+                "DevOps: Docker, CI/CD, cloud deployment",
+                "Integration: RESTful APIs, GraphQL, WebSocket connections",
+            ],
         },
         {
             question: "How do you approach learning new technologies?",
@@ -33,6 +53,13 @@ const Faq = () => {
         {
             question: "What makes you different from other developers?",
             answer: "I combine strong computer science fundamentals with practical production experience. I focus on building maintainable, scalable solutions rather than just functional code. I understand system design, database architecture, and the importance of writing code that lasts in production environments.",
+            bulletPoints: [
+                "Deep understanding of data structures and algorithms",
+                "Production-focused development approach",
+                "Emphasis on code maintainability and scalability",
+                "Strong system design and architecture skills",
+                "Commitment to writing documentation and tests",
+            ],
         },
     ];
 
@@ -102,7 +129,24 @@ const Faq = () => {
                                     }`}
                                 >
                                     <div className="px-6 pb-4 text-gray-300 leading-relaxed">
-                                        {item.answer}
+                                        <p className="mb-3">{item.answer}</p>
+                                        {item.bulletPoints && (
+                                            <ul className="list-disc list-inside space-y-2 ml-2">
+                                                {item.bulletPoints.map(
+                                                    (point, pointIndex) => (
+                                                        <li
+                                                            key={pointIndex}
+                                                            className="flex items-start"
+                                                        >
+                                                            <span className="text-blue-400 mr-2">
+                                                                •
+                                                            </span>
+                                                            <span>{point}</span>
+                                                        </li>
+                                                    ),
+                                                )}
+                                            </ul>
+                                        )}
                                     </div>
                                 </div>
                             </div>
