@@ -5,6 +5,7 @@ import Skills from "../sections/Skills";
 import Education from "../sections/Education";
 import Faq from "../sections/Faq";
 import Contact from "../sections/Contact";
+import Footer from "../sections/Footer";
 import useScrollReveal from "../hooks/useScrollReveal";
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
             <Education />
             <Faq />
             <Contact />
+            <Footer />
         </div>
     );
 };
