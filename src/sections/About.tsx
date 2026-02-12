@@ -189,7 +189,7 @@ const About = () => {
                                 <Mail className="w-5 h-5 text-white" />
                             </a>
                             <a
-                                href="https://linkedin.com/in/your-profile"
+                                href="https://www.linkedin.com/in/md-mahir-asef-dev/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group border border-white"
@@ -197,7 +197,7 @@ const About = () => {
                                 <Linkedin className="w-5 h-5 text-white" />
                             </a>
                             <a
-                                href="https://github.com/your-username"
+                                href="https://github.com/Md-Mahir-Asef"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group border border-white"
@@ -205,7 +205,7 @@ const About = () => {
                                 <Github className="w-5 h-5 text-white" />
                             </a>
                             <a
-                                href="https://twitter.com/your-username"
+                                href="https://x.com/MdMahirAsef"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 bg-linear-to-r from-gray-900 to-black rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group border border-white"
