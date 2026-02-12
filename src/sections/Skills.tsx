@@ -6,25 +6,84 @@ const Skills = () => {
                 { name: "JavaScript", image: "javascript.png" },
                 { name: "TypeScript", image: "typescript.png" },
                 { name: "SQL", image: "sql.png" },
+                { name: "Python", image: "python.png" },
+                { name: "Bash", image: "bash.png" },
             ],
         },
         {
             category: "Backend Technologies",
             skills: [
                 { name: "Node.js", image: "nodejs.png" },
-                { name: "PostgreSQL", image: "postgresql.png" },
-                { name: "MongoDB", image: "mongodb.png" },
-                { name: "REST API", image: "restapi.png" },
+                { name: "REST API", image: "api.png" },
                 { name: "Express", image: "express.png" },
+                { name: "JWT Authentication", image: "jwt.png" },
+                { name: "RBAC Access Control", image: "rbac.png" },
+                { name: "Redis (Caching)", image: "redis.png" },
             ],
         },
         {
             category: "Frontend Technologies",
             skills: [
-                { name: "ReactJS", image: "reactjs.png" },
+                { name: "React JS", image: "reactjs.png" },
                 { name: "HTML5", image: "html.png" },
                 { name: "CSS3", image: "css.png" },
+                { name: "Tailwind CSS", image: "tailwindcss.png" },
+                { name: "Shadcn UI", image: "shadcn.png" },
+                { name: "Axios", image: "axios.png" },
+                { name: "React Router DOM", image: "react-router.png" },
+                { name: "Vite", image: "vite.png" },
+            ],
+        },
+        {
+            category: "Database Technologies",
+            skills: [
+                { name: "PostgreSQL", image: "postgresql.png" },
+                { name: "MongoDB", image: "mongodb.png" },
+                { name: "Prisma ORM", image: "prisma.png" },
+                { name: "MySQL", image: "mysql.png" },
+                { name: "Supabase", image: "supabase.png" },
+            ],
+        },
+        {
+            category: "Frameworks & Libraries",
+            skills: [
+                { name: "Next.js", image: "nextjs.png" },
+                { name: "Zod", image: "zod.png" },
+                { name: "Winston Logger", image: "winston.png" },
+            ],
+        },
+        {
+            category: "Cloud & DevOps Technologies",
+            skills: [
+                { name: "Docker", image: "docker.png" },
+                { name: "Docker Compose", image: "compose.png" },
+                { name: "Logging", image: "logging.png" },
+                { name: "GitHub Actions", image: "github-actions.png" },
+            ],
+        },
+        {
+            category: "AI & Automation Skills",
+            skills: [
+                { name: "ChatGPT", image: "chatgpt.png" },
+                { name: "Cursor AI", image: "cursor.png" },
+                { name: "Prompt Engineering", image: "prompt.png" },
+            ],
+        },
+        {
+            category: "Testing",
+            skills: [
+                { name: "Postman", image: "postman.png" },
+                { name: "Unit Testing", image: "unit-testing.png" },
                 { name: "Jest", image: "jest.png" },
+                { name: "React Testing Library", image: "rtl.png" },
+            ],
+        },
+        {
+            category: "Operating Systems",
+            skills: [
+                { name: "Windows", image: "windows.png" },
+                { name: "Linux", image: "linux.png" },
+                { name: "Ubuntu", image: "ubuntu.png" },
             ],
         },
         {
@@ -33,6 +92,13 @@ const Skills = () => {
                 { name: "Git", image: "git.png" },
                 { name: "GitHub", image: "github.png" },
                 { name: "VS Code", image: "vscode.png" },
+            ],
+        },
+        {
+            category: "Mobile & Desktop Development",
+            skills: [
+                { name: "React Native", image: "expo.png" },
+                { name: "Electron", image: "electron.png" },
             ],
         },
     ];
