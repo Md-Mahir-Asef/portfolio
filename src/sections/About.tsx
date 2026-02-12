@@ -147,17 +147,17 @@ const About = () => {
                             <div className="absolute -inset-0.5 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg opacity-10"></div>
 
                             {/* Animated corner dots */}
-                            <div className="absolute -top-1 -left-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50"></div>
+                            <div className="absolute -top-1 -left-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full shadow-lg shadow-blue-500/50 animate-grow-shrink"></div>
                             <div
-                                className="absolute -top-1 -right-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-purple-500/50"
+                                className="absolute -top-1 -right-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full shadow-lg shadow-purple-500/50 animate-grow-shrink"
                                 style={{ animationDelay: "0.3s" }}
                             ></div>
                             <div
-                                className="absolute -bottom-1 -left-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50"
+                                className="absolute -bottom-1 -left-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full shadow-lg shadow-blue-500/50 animate-grow-shrink"
                                 style={{ animationDelay: "0.6s" }}
                             ></div>
                             <div
-                                className="absolute -bottom-1 -right-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-purple-500/50"
+                                className="absolute -bottom-1 -right-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full shadow-lg shadow-purple-500/50 animate-grow-shrink"
                                 style={{ animationDelay: "0.9s" }}
                             ></div>
 
