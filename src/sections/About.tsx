@@ -71,11 +71,14 @@ const TypingEffect = ({
 
 const About = () => {
     return (
-        <section className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8 scroll-reveal">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Column - Text Content */}
-                    <div className="space-y-6">
+                    <div
+                        className="space-y-6 scroll-reveal"
+                        style={{ animationDelay: "0.2s" }}
+                    >
                         <h2 className="text-4xl md:text-5xl font-bold">
                             <span className="bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                                 <TypingEffect
@@ -130,7 +133,10 @@ const About = () => {
                     {/* Right Column - Image and Social Icons */}
                     <div className="flex flex-col items-center space-y-6">
                         {/* Image Container */}
-                        <div className="relative">
+                        <div
+                            className="relative scroll-reveal"
+                            style={{ animationDelay: "0.4s" }}
+                        >
                             {/* Colorful glowing shadow */}
                             <div className="absolute -inset-4 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg opacity-30 blur-xl animate-pulse"></div>
                             <div

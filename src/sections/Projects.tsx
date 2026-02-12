@@ -43,7 +43,7 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8"
+            className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8 scroll-reveal"
         >
             <div className="max-w-7xl mx-auto">
                 {/* Section Title */}
@@ -64,7 +64,10 @@ const Projects = () => {
                     {projects.map((project, index) => (
                         <div key={index} className="group">
                             {/* Card Container */}
-                            <div className="relative bg-[#1A1A1A] border border-[#333333] rounded-xl p-6 flex flex-col h-full">
+                            <div
+                                className="relative bg-[#1A1A1A] border border-[#333333] rounded-xl p-6 flex flex-col h-full scroll-reveal"
+                                style={{ animationDelay: `${index * 0.1}s` }}
+                            >
                                 {/* Animated gradient circle in top right corner */}
                                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-linear-to-r from-blue-500 to-purple-500 rounded-full shadow-lg shadow-purple-500/50 animate-grow-shrink"></div>
 

@@ -106,7 +106,7 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8"
+            className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8 scroll-reveal"
         >
             <div className="max-w-7xl mx-auto">
                 {/* Section Title */}
@@ -127,7 +127,10 @@ const Skills = () => {
                     {skillsData.map((category, index) => (
                         <div key={index} className="group">
                             {/* Skill Card */}
-                            <div className="relative bg-[#1A1A1A] border border-[#333333] rounded-xl p-6">
+                            <div
+                                className="relative bg-[#1A1A1A] border border-[#333333] rounded-xl p-6 scroll-reveal"
+                                style={{ animationDelay: `${index * 0.1}s` }}
+                            >
                                 {/* Animated gradient circles at corners */}
                                 <div className="absolute top-2 left-2 w-4 h-4 bg-linear-to-r from-blue-500 to-purple-500 rounded-full shadow-lg shadow-blue-500/50 animate-grow-shrink"></div>
                                 <div

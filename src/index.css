@@ -12,6 +12,25 @@
     }
 }
 
+body {
+    background: oklch(21% 0.034 264.665);
+}
+
 .animate-grow-shrink {
     animation: grow-shrink 2s ease-in-out infinite;
+}
+
+/* Scroll reveal animations */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out;
+    transition-delay: var(--delay, 0s);
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
 }
