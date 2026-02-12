@@ -146,11 +146,20 @@ const About = () => {
                             <div className="absolute -inset-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg opacity-20"></div>
                             <div className="absolute -inset-0.5 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg opacity-10"></div>
 
-                            {/* Corner dots */}
-                            <div className="absolute -top-1 -left-1 w-2 h-2 bg-blue-500 rounded-full"></div>
-                            <div className="absolute -top-1 -right-1 w-2 h-2 bg-purple-500 rounded-full"></div>
-                            <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-pink-500 rounded-full"></div>
-                            <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-blue-500 rounded-full"></div>
+                            {/* Animated corner dots */}
+                            <div className="absolute -top-1 -left-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50"></div>
+                            <div
+                                className="absolute -top-1 -right-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-purple-500/50"
+                                style={{ animationDelay: "0.3s" }}
+                            ></div>
+                            <div
+                                className="absolute -bottom-1 -left-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50"
+                                style={{ animationDelay: "0.6s" }}
+                            ></div>
+                            <div
+                                className="absolute -bottom-1 -right-1 w-3 h-3 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-purple-500/50"
+                                style={{ animationDelay: "0.9s" }}
+                            ></div>
 
                             {/* Image */}
                             <div className="relative bg-gray-800 rounded-lg p-1">

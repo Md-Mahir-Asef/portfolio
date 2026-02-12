@@ -128,11 +128,20 @@ const Skills = () => {
                         <div key={index} className="group">
                             {/* Skill Card */}
                             <div className="relative bg-[#1A1A1A] border border-[#333333] rounded-xl p-6">
-                                {/* Gradient circles at corners */}
-                                <div className="absolute top-2 left-2 w-3 h-3 bg-linear-to-br from-purple-500 to-blue-500 rounded-full opacity-60 blur-sm"></div>
-                                <div className="absolute top-2 right-2 w-3 h-3 bg-linear-to-br from-purple-500 to-blue-500 rounded-full opacity-60 blur-sm"></div>
-                                <div className="absolute bottom-2 left-2 w-3 h-3 bg-linear-to-br from-purple-500 to-blue-500 rounded-full opacity-60 blur-sm"></div>
-                                <div className="absolute bottom-2 right-2 w-3 h-3 bg-linear-to-br from-purple-500 to-blue-500 rounded-full opacity-60 blur-sm"></div>
+                                {/* Animated gradient circles at corners */}
+                                <div className="absolute top-2 left-2 w-4 h-4 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50"></div>
+                                <div
+                                    className="absolute top-2 right-2 w-4 h-4 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-purple-500/50"
+                                    style={{ animationDelay: "0.5s" }}
+                                ></div>
+                                <div
+                                    className="absolute bottom-2 left-2 w-4 h-4 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50"
+                                    style={{ animationDelay: "1s" }}
+                                ></div>
+                                <div
+                                    className="absolute bottom-2 right-2 w-4 h-4 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-purple-500/50"
+                                    style={{ animationDelay: "1.5s" }}
+                                ></div>
 
                                 {/* Category Title */}
                                 <h3 className="text-xl font-semibold text-white mb-4">

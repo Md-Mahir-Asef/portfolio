@@ -65,8 +65,8 @@ const Projects = () => {
                         <div key={index} className="group">
                             {/* Card Container */}
                             <div className="relative bg-[#1A1A1A] border border-[#333333] rounded-xl p-6 flex flex-col h-full">
-                                {/* Gradient circle in top right corner */}
-                                <div className="absolute -top-2 -right-2 w-6 h-6 bg-linear-to-br to-blue-500 rounded-full opacity-70 blur-sm"></div>
+                                {/* Animated gradient circle in top right corner */}
+                                <div className="absolute -top-2 -right-2 w-6 h-6 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse shadow-lg shadow-purple-500/50"></div>
 
                                 {/* Project Title and Period */}
                                 <h3 className="text-xl font-semibold text-white mb-1">
