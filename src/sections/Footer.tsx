@@ -28,12 +28,13 @@ const Footer = () => {
     };
 
     const services = [
-        "Full-Stack Development",
-        "Backend Development",
-        "API Design & Development",
-        "Database Architecture",
-        "Technical Consulting",
-        "Code Review & Optimization",
+        "TypeScript/Node.js Backend Development",
+        "Full-Stack Web Development (React + Node.js)",
+        "REST API Development & Integration",
+        "Database Design & Optimization",
+        "Freelance Contract Project Consulting",
+        "Bug Fixing & Code Refactoring Services",
+        "Open Source Contributions & Automation Scripts",
     ];
 
     const quickLinks = [
@@ -53,12 +54,18 @@ const Footer = () => {
                     {/* Column 1: Personal Branding */}
                     <div className="space-y-4">
                         <h3 className="text-2xl font-bold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                            Md Mahir Asef
+                            Md. Mahir Asef
                         </h3>
                         <p className="text-gray-300 text-sm leading-relaxed">
-                            Backend-focused full-stack engineer passionate about
-                            building clean, maintainable, and production-ready
-                            web applications.
+                            I’m always excited to take on new opportunities,
+                            collaborate on innovative projects, or just have a
+                            meaningful conversation about technology. Whether
+                            it’s building scalable applications, solving complex
+                            backend challenges, or exploring creative full-stack
+                            solutions, I’m ready to bring ideas to life. Feel
+                            free to reach out—I’m just a message away and eager
+                            to connect with like-minded professionals to create
+                            something impactful together.
                         </p>
 
                         {/* Social Media Icons */}

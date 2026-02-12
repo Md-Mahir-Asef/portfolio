@@ -26,7 +26,7 @@ const Header = () => {
                                 alt="Logo"
                                 width={30}
                             />
-                            <h1 className="text-xl font-bold">
+                            <h1 className="text-xl font-bold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                                 Md. Mahir Asef
                             </h1>
                         </div>
