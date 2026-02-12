@@ -46,7 +46,7 @@ const Contact = () => {
                 <div className="flex flex-row items-center justify-center gap-12">
                     {/* Vertical Glowing Line with Balls */}
                     <div className="relative lg:order-1 order-2">
-                        <div className="relative w-2 h-170 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mx-auto lg:mx-0">
+                        <div className="relative w-2 h-175 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mx-auto lg:mx-0">
                             {/* Glowing balls aligned with each contact card */}
                             {/* LinkedIn ball - 25% */}
                             <div

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Mail, Linkedin, Github } from "lucide-react";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 const TypingEffect = ({
     texts,
@@ -84,20 +85,24 @@ const About = () => {
                     >
                         <h2 className="text-4xl md:text-5xl font-bold">
                             <span className="bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                                <TypingEffect
-                                    texts={[
-                                        "Full Stack Developer",
-                                        "Backend Developer",
-                                        "Software Engineer",
-                                        "AI Engineer",
-                                        "Web Developer",
-                                        "Problem Solver",
-                                    ]}
-                                    speed={100}
-                                    eraseSpeed={50}
-                                    typingDelay={500}
-                                    eraseDelay={2000}
-                                />
+                                <ErrorBoundary
+                                    fallback={<span>Full Stack Developer</span>}
+                                >
+                                    <TypingEffect
+                                        texts={[
+                                            "Full Stack Developer",
+                                            "Backend Developer",
+                                            "Software Engineer",
+                                            "AI Engineer",
+                                            "Web Developer",
+                                            "Problem Solver",
+                                        ]}
+                                        speed={100}
+                                        eraseSpeed={50}
+                                        typingDelay={500}
+                                        eraseDelay={2000}
+                                    />
+                                </ErrorBoundary>
                             </span>
                         </h2>
 

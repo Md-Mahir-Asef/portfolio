@@ -2,31 +2,50 @@ import { useEffect } from "react";
 
 const useScrollReveal = () => {
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("revealed");
-                    }
-                });
-            },
-            {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px",
-            },
-        );
+        let observer: IntersectionObserver | null = null;
 
-        // Observe all elements with scroll-reveal class
-        const elements = document.querySelectorAll(".scroll-reveal");
+        try {
+            observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting && entry.target) {
+                            entry.target.classList.add("revealed");
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1,
+                    rootMargin: "0px 0px -50px 0px",
+                },
+            );
 
-        elements.forEach((element) => {
-            observer.observe(element);
-        });
+            // Observe all elements with scroll-reveal class
+            const elements = document.querySelectorAll(".scroll-reveal");
+
+            elements.forEach((element) => {
+                if (element) {
+                    observer?.observe(element);
+                }
+            });
+        } catch (error) {
+            console.error("Error setting up scroll reveal:", error);
+        }
 
         return () => {
-            elements.forEach((element) => {
-                observer.unobserve(element);
-            });
+            if (observer) {
+                try {
+                    const elements =
+                        document.querySelectorAll(".scroll-reveal");
+                    elements.forEach((element) => {
+                        if (element) {
+                            observer.unobserve(element);
+                        }
+                    });
+                    observer.disconnect();
+                } catch (error) {
+                    console.error("Error cleaning up scroll reveal:", error);
+                }
+            }
         };
     }, []);
 };
