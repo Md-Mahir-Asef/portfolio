@@ -26,9 +26,10 @@ function ScrollProgress() {
                 left: 0,
                 height: "3px",
                 width: `${progress}%`,
-                background: "linear-gradient(90deg, #fbbf24, #f59e0b, #d97706)",
+                background: "linear-gradient(90deg, #b8860b, #ffd700, #f1c40f)",
+                boxShadow: "0 0 12px rgba(255, 215, 0, 0.7)",
                 zIndex: 9999,
-                transition: "width 0.1s ease-out",
+                transition: "width 0.08s linear",
             }}
         />
     );
