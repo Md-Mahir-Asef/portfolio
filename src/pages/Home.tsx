@@ -7,12 +7,14 @@ import Faq from "../sections/Faq";
 import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
 import useScrollReveal from "../hooks/useScrollReveal";
+import ScrollProgress from "../components/ScrollProgress";
 
 const Home = () => {
     useScrollReveal();
 
     return (
         <div>
+            <ScrollProgress />
             <Header />
             <About />
             <Projects />
