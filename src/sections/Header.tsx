@@ -1,17 +1,18 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navItems = [
-        { name: "About", href: "#about" },
-        { name: "Projects", href: "#projects" },
-        { name: "Skills", href: "#skills" },
-        { name: "Education", href: "#education" },
-        { name: "FAQ", href: "#faq" },
-        { name: "Contact", href: "#contact" },
-        { name: "Resume", href: "#resume", isOutlined: true },
+        { name: "About", href: "#about", isRouter: false },
+        { name: "Projects", href: "#projects", isRouter: false },
+        { name: "Skills", href: "#skills", isRouter: false },
+        { name: "Education", href: "#education", isRouter: false },
+        { name: "FAQ", href: "#faq", isRouter: false },
+        { name: "Contact", href: "#contact", isRouter: false },
+        { name: "Resume", href: "/resume", isRouter: true, isOutlined: true },
     ];
 
     return (
@@ -34,19 +35,33 @@ const Header = () => {
                         {/* Desktop Navigation */}
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
-                                {navItems.map((item) => (
-                                    <a
-                                        key={item.name}
-                                        href={item.href}
-                                        className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                                            item.isOutlined
-                                                ? "border border-gray-300 hover:border-white"
-                                                : ""
-                                        }`}
-                                    >
-                                        {item.name}
-                                    </a>
-                                ))}
+                                {navItems.map((item) =>
+                                    item.isRouter ? (
+                                        <Link
+                                            key={item.name}
+                                            to={item.href}
+                                            className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                                                item.isOutlined
+                                                    ? "border border-gray-300 hover:border-white"
+                                                    : ""
+                                            }`}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    ) : (
+                                        <a
+                                            key={item.name}
+                                            href={item.href}
+                                            className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                                                item.isOutlined
+                                                    ? "border border-gray-300 hover:border-white"
+                                                    : ""
+                                            }`}
+                                        >
+                                            {item.name}
+                                        </a>
+                                    ),
+                                )}
                             </div>
                         </div>
 
@@ -69,20 +84,35 @@ const Header = () => {
                     {isMenuOpen && (
                         <div className="md:hidden">
                             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                                {navItems.map((item) => (
-                                    <a
-                                        key={item.name}
-                                        href={item.href}
-                                        className={`text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${
-                                            item.isOutlined
-                                                ? "border border-gray-300 hover:border-white"
-                                                : ""
-                                        }`}
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        {item.name}
-                                    </a>
-                                ))}
+                                {navItems.map((item) =>
+                                    item.isRouter ? (
+                                        <Link
+                                            key={item.name}
+                                            to={item.href}
+                                            className={`text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${
+                                                item.isOutlined
+                                                    ? "border border-gray-300 hover:border-white"
+                                                    : ""
+                                            }`}
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    ) : (
+                                        <a
+                                            key={item.name}
+                                            href={item.href}
+                                            className={`text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${
+                                                item.isOutlined
+                                                    ? "border border-gray-300 hover:border-white"
+                                                    : ""
+                                            }`}
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            {item.name}
+                                        </a>
+                                    ),
+                                )}
                             </div>
                         </div>
                     )}
