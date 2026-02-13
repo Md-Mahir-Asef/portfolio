@@ -5,6 +5,17 @@ import { Menu, X } from "lucide-react";
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const handleNavigation = (href: string) => {
+        if (href.startsWith("#")) {
+            // Navigate to home page first, then scroll to section
+            window.location.href = "/" + href;
+        } else {
+            // Handle other routes
+            window.location.href = href;
+        }
+        setIsMenuOpen(false);
+    };
+
     const navItems = [
         { name: "About", href: "#about", isRouter: false },
         { name: "Projects", href: "#projects", isRouter: false },
@@ -21,7 +32,7 @@ const Header = () => {
                 <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         {/* Logo/Name */}
-                        <div className="shrink-0 flex flex-row gap-2">
+                        <Link to={"/"} className="shrink-0 flex flex-row gap-2">
                             <img
                                 src="/images/logo-no-bg.png"
                                 alt="Logo"
@@ -30,7 +41,7 @@ const Header = () => {
                             <h1 className="text-xl font-bold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                                 Md. Mahir Asef
                             </h1>
-                        </div>
+                        </Link>
 
                         {/* Desktop Navigation */}
                         <div className="hidden md:block">
@@ -49,9 +60,11 @@ const Header = () => {
                                             {item.name}
                                         </Link>
                                     ) : (
-                                        <a
+                                        <button
                                             key={item.name}
-                                            href={item.href}
+                                            onClick={() =>
+                                                handleNavigation(item.href)
+                                            }
                                             className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                                                 item.isOutlined
                                                     ? "border border-gray-300 hover:border-white"
@@ -59,7 +72,7 @@ const Header = () => {
                                             }`}
                                         >
                                             {item.name}
-                                        </a>
+                                        </button>
                                     ),
                                 )}
                             </div>
@@ -99,18 +112,19 @@ const Header = () => {
                                             {item.name}
                                         </Link>
                                     ) : (
-                                        <a
+                                        <button
                                             key={item.name}
-                                            href={item.href}
+                                            onClick={() =>
+                                                handleNavigation(item.href)
+                                            }
                                             className={`text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium ${
                                                 item.isOutlined
                                                     ? "border border-gray-300 hover:border-white"
                                                     : ""
                                             }`}
-                                            onClick={() => setIsMenuOpen(false)}
                                         >
                                             {item.name}
-                                        </a>
+                                        </button>
                                     ),
                                 )}
                             </div>

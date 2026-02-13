@@ -20,6 +20,16 @@ const Footer = () => {
         }
     };
 
+    const handleNavigation = (href: string) => {
+        if (href.startsWith("#")) {
+            // Navigate to home page first, then scroll to section
+            window.location.href = "/" + href;
+        } else {
+            // Handle external links or other routes
+            window.location.href = href;
+        }
+    };
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -151,15 +161,17 @@ const Footer = () => {
                         <ul className="space-y-2">
                             {quickLinks.map((link, index) => (
                                 <li key={index}>
-                                    <a
-                                        href={link.href}
+                                    <button
+                                        onClick={() =>
+                                            handleNavigation(link.href)
+                                        }
                                         className="text-gray-300 text-sm hover:text-white transition-colors duration-200 flex items-center group"
                                     >
                                         <span className="text-blue-400 mr-2 group-hover:translate-x-1 transition-transform duration-200">
                                             ›
                                         </span>
                                         {link.name}
-                                    </a>
+                                    </button>
                                 </li>
                             ))}
                         </ul>
