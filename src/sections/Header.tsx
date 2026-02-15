@@ -23,6 +23,7 @@ const Header = () => {
         { name: "Education", href: "#education", isRouter: false },
         { name: "FAQ", href: "#faq", isRouter: false },
         { name: "Contact", href: "#contact", isRouter: false },
+        { name: "Blog", href: "/blog/page/1", isRouter: true },
         { name: "Resume", href: "/resume", isRouter: true, isOutlined: true },
     ];
 
