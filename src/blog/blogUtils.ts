@@ -86,7 +86,7 @@ const postComponents = {
     "nodejs-microservices": NodeJsMicroservices,
     "react-hooks-advanced": ReactHooksAdvanced,
     "devops-pipeline": DevOpsPipeline,
-    "cloud-native-apps": CloudNativeApps,
+    "cloud-native-applications-guide": CloudNativeApps,
 };
 
 export const blogPosts: BlogPost[] = [];
