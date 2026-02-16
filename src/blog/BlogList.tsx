@@ -4,53 +4,32 @@ import BlogCard from "./components/BlogCard";
 import { getBlogPosts, getBlogPostsByPage, getTotalPages } from "./blogUtils";
 import useScrollReveal from "../hooks/useScrollReveal";
 import ScrollProgress from "../components/ScrollProgress";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
 
 export default function BlogList() {
+    const PostsPerPage = 9;
     const { page } = useParams();
     const navigate = useNavigate();
     const currentPageFromUrl = page ? parseInt(page, 10) : 1;
     const [currentPage, setCurrentPage] = useState(currentPageFromUrl);
-    const [postsPerPage, setPostsPerPage] = useState(9);
 
     useScrollReveal();
 
-    const totalPages = getTotalPages(postsPerPage);
-    const currentPosts = getBlogPostsByPage(currentPage, postsPerPage);
+    const totalPages = getTotalPages(PostsPerPage);
+    const currentPosts = getBlogPostsByPage(currentPage, PostsPerPage);
 
     const handlePageChange = (
         _event: React.ChangeEvent<unknown>,
         value: number,
     ) => {
+        console.log("From handlePageChange", value);
         setCurrentPage(value);
         navigate(`/blog/page/${value}`);
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.location.reload();
     };
-
-    const handlePostsPerPageChange = (event: any) => {
-        const newPostsPerPage = event.target.value;
-        setPostsPerPage(newPostsPerPage);
-        setCurrentPage(1);
-        navigate(`/blog/page/1`);
-    };
-
-    useEffect(() => {
-        console.log("currentPage ", currentPage);
-        console.log("postsPerPage ", postsPerPage);
-        console.log("---");
-        console.log(currentPosts);
-        console.log("---");
-        const urlPage = page ? parseInt(page, 10) : 1;
-        if (urlPage !== currentPage) {
-            setCurrentPage(urlPage);
-        }
-    }, [page, currentPage]);
 
     return (
         <div>
@@ -91,46 +70,7 @@ export default function BlogList() {
             {totalPages > 1 && (
                 <section className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto">
-                        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-                            {/* Posts Per Page Selector */}
-                            <div className="flex items-center gap-3">
-                                <span className="text-sm text-gray-300">
-                                    Show:
-                                </span>
-                                <FormControl size="small" sx={{ minWidth: 80 }}>
-                                    <Select
-                                        value={postsPerPage}
-                                        onChange={handlePostsPerPageChange}
-                                        sx={{
-                                            color: "#ffffff",
-                                            borderColor: "#333333",
-                                            "& .MuiOutlinedInput-notchedOutline":
-                                                {
-                                                    borderColor: "#333333",
-                                                },
-                                            "&:hover .MuiOutlinedInput-notchedOutline":
-                                                {
-                                                    borderColor: "#9333ea",
-                                                },
-                                            "&.Mui-focused .MuiOutlinedInput-notchedOutline":
-                                                {
-                                                    borderColor: "#9333ea",
-                                                },
-                                            "& .MuiSvgIcon-root": {
-                                                color: "#ffffff",
-                                            },
-                                        }}
-                                    >
-                                        <MenuItem value={6}>6</MenuItem>
-                                        <MenuItem value={9}>9</MenuItem>
-                                        <MenuItem value={12}>12</MenuItem>
-                                    </Select>
-                                </FormControl>
-                                <span className="text-sm text-gray-300">
-                                    posts per page
-                                </span>
-                            </div>
-
+                        <div className="flex items-center justify-center">
                             {/* Pagination */}
                             <Stack spacing={2}>
                                 <Pagination
@@ -167,10 +107,10 @@ export default function BlogList() {
                         {/* Page Info */}
                         <div className="text-center mt-6">
                             <p className="text-sm text-gray-400">
-                                Showing {(currentPage - 1) * postsPerPage + 1}{" "}
+                                Showing {(currentPage - 1) * PostsPerPage + 1}{" "}
                                 to{" "}
                                 {Math.min(
-                                    currentPage * postsPerPage,
+                                    currentPage * PostsPerPage,
                                     getBlogPosts().length,
                                 )}{" "}
                                 of {getBlogPosts().length} posts
