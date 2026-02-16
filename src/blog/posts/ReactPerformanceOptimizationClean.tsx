@@ -2,7 +2,7 @@ import BlogLayout from "../components/BlogLayout";
 
 export const metaData = {
     title: "React Performance Optimization Techniques",
-    slug: "react-performance-optimization",
+    slug: "react-performance-optimization-clean",
     tags: ["React", "Performance", "Frontend"],
     date: "2024-02-05",
     read_time: "6",

@@ -1,27 +1,11 @@
 import { useParams } from "react-router-dom";
 import { getBlogPostBySlug } from "./blogUtils";
-import BuildingScalableApis from "./posts/BuildingScalableApis";
-import AdvancedPostgreSQLPatterns from "./posts/AdvancedPostgreSQLPatterns";
-import ReactPerformanceOptimizationClean from "./posts/ReactPerformanceOptimizationClean";
-import MicroservicesArchitecture from "./posts/MicroservicesArchitecture";
-import TypeScriptAdvancedTypes from "./posts/TypeScriptAdvancedTypes";
-
-const blogPostComponents = {
-    "building-scalable-apis-nodejs-typescript": BuildingScalableApis,
-    "advanced-postgresql-patterns": AdvancedPostgreSQLPatterns,
-    "react-performance-optimization": ReactPerformanceOptimizationClean,
-    "microservices-architecture-guide": MicroservicesArchitecture,
-    "typescript-advanced-types-patterns": TypeScriptAdvancedTypes,
-};
 
 export default function BlogPost() {
     const { slug } = useParams<{ slug: string }>();
-    const post = getBlogPostBySlug(slug || "");
+    const Post = getBlogPostBySlug(slug || "");
 
-    if (
-        !post ||
-        !blogPostComponents[post.slug as keyof typeof blogPostComponents]
-    ) {
+    if (!Post) {
         return (
             <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
                 <div className="text-center">
@@ -36,8 +20,5 @@ export default function BlogPost() {
         );
     }
 
-    const BlogPostComponent =
-        blogPostComponents[post.slug as keyof typeof blogPostComponents];
-
-    return <BlogPostComponent />;
+    return <Post />;
 }

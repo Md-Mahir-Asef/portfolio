@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -12,6 +12,10 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/landing" element={<Home />} />
                 <Route path="/resume" element={<Resume />} />
+                <Route
+                    path="/blog"
+                    element={<Navigate to="/blog/page/1" replace />}
+                />
                 <Route path="/blog/page/:page" element={<BlogList />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
             </Routes>
