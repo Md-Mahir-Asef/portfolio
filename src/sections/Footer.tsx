@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, Linkedin, Github, ArrowUp } from "lucide-react";
+import { href } from "react-router-dom";
 
 const Footer = () => {
     const [copiedStates, setCopiedStates] = useState<{
@@ -48,12 +49,13 @@ const Footer = () => {
     ];
 
     const quickLinks = [
-        { name: "About", href: "#about" },
-        { name: "Projects", href: "#projects" },
-        { name: "Skills", href: "#skills" },
-        { name: "Education", href: "#education" },
-        { name: "FAQ", href: "#faq" },
-        { name: "Contact", href: "#contact" },
+        { name: "About", href: "/#about" },
+        { name: "Projects", href: "/#projects" },
+        { name: "Skills", href: "/#skills" },
+        { name: "Education", href: "/#education" },
+        { name: "FAQ", href: "/#faq" },
+        { name: "Contact", href: "/#contact" },
+        { name: "Blog", href: "/blog/page/1" },
     ];
 
     return (
@@ -183,7 +185,7 @@ const Footer = () => {
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         {/* Copyright */}
                         <p className="text-gray-400 text-sm">
-                            © 2025 Md Mahir Asef. All rights reserved.
+                            © 2026 Md Mahir Asef. All rights reserved.
                         </p>
 
                         {/* Back to Top Button */}

@@ -32,6 +32,7 @@ const Skills = () => {
                 { name: "React Router DOM", image: "react-router.png" },
                 { name: "Vite", image: "vite.png" },
                 { name: "Next.js", image: "nextjs.png" },
+                { name: "React Flow", image: "react-flow.png" },
             ],
         },
         {
