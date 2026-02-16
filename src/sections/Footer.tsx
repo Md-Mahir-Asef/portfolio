@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Mail, Linkedin, Github, ArrowUp } from "lucide-react";
-import { href } from "react-router-dom";
 
 const Footer = () => {
     const [copiedStates, setCopiedStates] = useState<{
