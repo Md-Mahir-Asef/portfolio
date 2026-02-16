@@ -1,6 +1,6 @@
 import Footer from "../sections/Footer";
 import Header from "../sections/Header";
-import BlogCard from "../components/BlogCard";
+import BlogCard from "./components/BlogCard";
 import { getBlogPosts } from "./blogUtils";
 import useScrollReveal from "../hooks/useScrollReveal";
 import ScrollProgress from "../components/ScrollProgress";
