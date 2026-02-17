@@ -80,7 +80,7 @@ const About = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xs:gap-10 lg:gap-12 items-center">
                     {/* Left Column - Text Content */}
                     <div
-                        className="space-y-4 xs:space-y-6 scroll-reveal"
+                        className="space-y-4 xs:space-y-6 scroll-reveal order-2 lg:order-0"
                         style={{ animationDelay: "0.2s" }}
                     >
                         <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold">
@@ -139,7 +139,7 @@ const About = () => {
                     </div>
 
                     {/* Right Column - Image and Social Icons */}
-                    <div className="flex flex-col items-center space-y-4 xs:space-y-6">
+                    <div className="flex flex-col items-center space-y-4 xs:space-y-6 order-1 lg:order-0">
                         {/* Image Container */}
                         <div
                             className="relative scroll-reveal"

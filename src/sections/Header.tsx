@@ -41,7 +41,7 @@ const Header = () => {
                                 className="xs:w-6 xs:h-6 w-6 h-6"
                             />
                             <h1 className="text-base xs:text-lg sm:text-xl font-bold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                                Md. Mahir
+                                Md. Mahir Asef
                             </h1>
                         </Link>
 
@@ -55,7 +55,7 @@ const Header = () => {
                                             to={item.href}
                                             className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                                                 item.isOutlined
-                                                    ? "border border-gray-300 hover:border-white"
+                                                    ? "border border-gray-300 hover:border-white w-fit"
                                                     : ""
                                             }`}
                                         >
