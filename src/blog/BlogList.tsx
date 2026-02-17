@@ -37,15 +37,15 @@ export default function BlogList() {
             <Header />
 
             {/* Hero Section */}
-            <section className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8">
+            <section className="bg-gray-900 text-white py-12 xs:py-16 sm:py-20 px-4 xs:px-6 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 scroll-reveal">
+                    <h1 className="text-3xl xs:text-4xl md:text-5xl font-bold mb-4 xs:mb-6 scroll-reveal">
                         <span className="bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                             Blog & Articles
                         </span>
                     </h1>
                     <p
-                        className="text-xl text-gray-300 max-w-3xl mx-auto scroll-reveal"
+                        className="text-lg xs:text-xl text-gray-300 max-w-3xl mx-auto scroll-reveal"
                         style={{ animationDelay: "0.2s" }}
                     >
                         Thoughts, tutorials, and insights about software
@@ -56,9 +56,9 @@ export default function BlogList() {
             </section>
 
             {/* Blog Posts Grid */}
-            <section className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+            <section className="bg-gray-900 text-white py-12 xs:py-16 px-4 xs:px-6 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xs:gap-8">
                         {currentPosts?.map((post, index) => (
                             <BlogCard key={post.id} post={post} index={index} />
                         ))}
@@ -68,7 +68,7 @@ export default function BlogList() {
 
             {/* Pagination Section */}
             {totalPages > 1 && (
-                <section className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+                <section className="bg-gray-900 text-white py-8 xs:py-12 px-4 xs:px-6 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto">
                         <div className="flex items-center justify-center">
                             {/* Pagination */}
@@ -78,11 +78,14 @@ export default function BlogList() {
                                     page={currentPage}
                                     onChange={handlePageChange}
                                     color="primary"
-                                    size="large"
+                                    size="small"
                                     sx={{
                                         "& .MuiPaginationItem-root": {
                                             color: "#ffffff",
                                             borderColor: "#333333",
+                                            fontSize: "0.875rem",
+                                            minWidth: "32px",
+                                            height: "32px",
                                             "&:hover": {
                                                 backgroundColor: "#9333ea",
                                             },
@@ -105,8 +108,8 @@ export default function BlogList() {
                         </div>
 
                         {/* Page Info */}
-                        <div className="text-center mt-6">
-                            <p className="text-sm text-gray-400">
+                        <div className="text-center mt-4 xs:mt-6">
+                            <p className="text-xs xs:text-sm text-gray-400">
                                 Showing {(currentPage - 1) * PostsPerPage + 1}{" "}
                                 to{" "}
                                 {Math.min(

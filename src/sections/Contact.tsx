@@ -26,27 +26,27 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8 scroll-reveal"
+            className="bg-gray-900 text-white py-12 xs:py-16 sm:py-20 px-4 xs:px-6 sm:px-6 lg:px-8 scroll-reveal"
         >
             <div className="max-w-7xl mx-auto">
                 {/* Section Title */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                <div className="text-center mb-12 xs:mb-16">
+                    <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold mb-3 xs:mb-4">
                         Contact
                     </h2>
                     {/* Decorative gradient elements */}
-                    <div className="flex justify-center space-x-4 mb-8">
-                        <div className="w-16 h-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-                        <div className="w-3 h-3 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
-                        <div className="w-16 h-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+                    <div className="flex justify-center space-x-2 xs:space-x-4 mb-6 xs:mb-8">
+                        <div className="w-12 xs:w-16 h-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+                        <div className="w-2 xs:w-3 h-2 xs:h-3 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
+                        <div className="w-12 xs:w-16 h-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"></div>
                     </div>
                 </div>
 
-                {/* Contact Content */}
-                <div className="flex flex-row items-center justify-center gap-12">
-                    {/* Vertical Glowing Line with Balls */}
-                    <div className="relative lg:order-1 order-2">
-                        <div className="relative w-2 h-175 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mx-auto lg:mx-0">
+                {/* Contact Content - Mobile First Layout */}
+                <div className="flex flex-col lg:flex-row items-center justify-center gap-8 xs:gap-12">
+                    {/* Decorative Vertical Line - Only visible on larger screens */}
+                    <div className="hidden lg:flex relative order-1 lg:order-1">
+                        <div className="relative w-2 h-175 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full">
                             {/* Glowing balls aligned with each contact card */}
                             {/* LinkedIn ball - 25% */}
                             <div
@@ -69,8 +69,8 @@ const Contact = () => {
                     </div>
 
                     {/* Contact Links */}
-                    <div className="flex-1 lg:order-2 order-1 max-w-2xl">
-                        <div className="space-y-6">
+                    <div className="w-full max-w-2xl order-2 lg:order-2">
+                        <div className="space-y-4 xs:space-y-6">
                             <EmailCard
                                 copiedStates={copiedStates}
                                 copyToClipboard={copyToClipboard}
@@ -90,13 +90,13 @@ const Contact = () => {
                         </div>
 
                         {/* Additional Message */}
-                        <div className="mt-12 text-center">
-                            <p className="text-gray-400 text-lg">
+                        <div className="mt-8 xs:mt-12 text-center">
+                            <p className="text-gray-400 text-base xs:text-lg">
                                 I'm always open to discussing new opportunities,
                                 interesting projects, or just having a chat
                                 about technology.
                             </p>
-                            <p className="text-gray-500 text-sm mt-2">
+                            <p className="text-gray-500 text-sm xs:text-base mt-2">
                                 Feel free to reach out through any of the
                                 platforms above!
                             </p>

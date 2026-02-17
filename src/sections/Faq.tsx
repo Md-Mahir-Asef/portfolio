@@ -62,24 +62,24 @@ const Faq = () => {
     return (
         <section
             id="faq"
-            className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8 scroll-reveal"
+            className="bg-gray-900 text-white py-12 xs:py-16 sm:py-20 px-4 xs:px-6 sm:px-6 lg:px-8 scroll-reveal"
         >
             <div className="max-w-7xl mx-auto">
                 {/* Section Title */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                <div className="text-center mb-12 xs:mb-16">
+                    <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold mb-3 xs:mb-4">
                         Frequently Asked Questions
                     </h2>
                     {/* Decorative gradient elements */}
-                    <div className="flex justify-center space-x-4 mb-8">
-                        <div className="w-16 h-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-                        <div className="w-3 h-3 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
-                        <div className="w-16 h-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+                    <div className="flex justify-center space-x-2 xs:space-x-4 mb-6 xs:mb-8">
+                        <div className="w-12 xs:w-16 h-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+                        <div className="w-2 xs:w-3 h-2 xs:h-3 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"></div>
+                        <div className="w-12 xs:w-16 h-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"></div>
                     </div>
                 </div>
 
                 {/* FAQ Items */}
-                <div className="max-w-4xl mx-auto space-y-4">
+                <div className="max-w-4xl mx-auto space-y-3 xs:space-y-4">
                     {faqData.map((item, index) => (
                         <div key={index} className="group">
                             <div
@@ -87,24 +87,24 @@ const Faq = () => {
                                 style={{ animationDelay: `${index * 0.1}s` }}
                             >
                                 {/* Animated gradient circle in top right corner */}
-                                <div className="absolute -top-2 -right-2 w-6 h-6 bg-linear-to-r from-blue-500 to-purple-500 rounded-full shadow-lg shadow-purple-500/50 animate-grow-shrink"></div>
+                                <div className="absolute -top-1 xs:-top-2 -right-1 xs:-right-2 w-4 xs:w-6 h-4 xs:h-6 bg-linear-to-r from-blue-500 to-purple-500 rounded-full shadow-lg shadow-purple-500/50 animate-grow-shrink"></div>
 
                                 {/* Question Header */}
                                 <button
                                     onClick={() => toggleItem(index)}
-                                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-[#2A2A2A] transition-all duration-200 group"
+                                    className="w-full px-4 xs:px-6 py-3 xs:py-4 text-left flex items-center justify-between hover:bg-[#2A2A2A] transition-all duration-200 group"
                                 >
-                                    <h3 className="text-lg font-semibold text-white pr-4">
+                                    <h3 className="text-base xs:text-lg font-semibold text-white pr-2 xs:pr-4">
                                         {item.question}
                                     </h3>
                                     <div
-                                        className={`shrink-0 w-8 h-8 bg-linear-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center transition-transform duration-300 ${
+                                        className={`shrink-0 w-6 xs:w-8 h-6 xs:h-8 bg-linear-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center transition-transform duration-300 ${
                                             expandedItems.includes(index)
                                                 ? "rotate-180"
                                                 : ""
                                         }`}
                                     >
-                                        <ChevronDown className="w-5 h-5 text-white" />
+                                        <ChevronDown className="w-4 h-4 xs:w-5 xs:h-5 text-white" />
                                     </div>
                                 </button>
 
@@ -112,29 +112,30 @@ const Faq = () => {
                                 <div
                                     className={`overflow-hidden transition-all duration-300 ease-in-out ${
                                         expandedItems.includes(index)
-                                            ? "max-h-96"
+                                            ? "max-h-96 xs:max-h-96"
                                             : "max-h-0"
                                     }`}
                                 >
-                                    <div className="px-6 pb-4 text-gray-300 leading-relaxed">
+                                    <div className="px-4 xs:px-6 pb-3 xs:pb-4 text-gray-300 leading-relaxed text-sm xs:text-base">
                                         <div
-                                            className="mb-3"
+                                            className="mb-2 xs:mb-3"
                                             dangerouslySetInnerHTML={{
                                                 __html: item.answer,
                                             }}
                                         />
                                         {item.bulletPoints && (
-                                            <ul className="list-disc list-inside space-y-2 ml-2">
+                                            <ul className="list-disc list-inside space-y-1 xs:space-y-2 ml-2">
                                                 {item.bulletPoints.map(
                                                     (point, pointIndex) => (
                                                         <li
                                                             key={pointIndex}
                                                             className="flex items-start"
                                                         >
-                                                            <span className="text-blue-400 mr-2">
+                                                            <span className="text-blue-400 mr-1 xs:mr-2">
                                                                 •
                                                             </span>
                                                             <span
+                                                                className="text-xs xs:text-sm"
                                                                 dangerouslySetInnerHTML={{
                                                                     __html: point,
                                                                 }}
@@ -152,13 +153,12 @@ const Faq = () => {
                 </div>
 
                 {/* Additional Message */}
-                <div className="mt-12 text-center">
-                    <p className="text-gray-400 text-lg">
+                <div className="mt-8 xs:mt-12 text-center">
+                    <p className="text-gray-400 text-base xs:text-lg">
                         Still have questions?
                     </p>
-                    <p className="text-gray-500 text-sm mt-2">
-                        Feel free to reach out through the contact section
-                        below!
+                    <p className="text-gray-500 text-sm xs:text-base mt-2">
+                        Feel free to reach out through contact section below!
                     </p>
                 </div>
             </div>
