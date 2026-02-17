@@ -47,6 +47,9 @@ import DevOpsPipeline, {
 import CloudNativeApps, {
     metaData as CloudNativeAppsMetaData,
 } from "./posts/CloudNativeApps";
+import AutoResizingTextareaBlog, {
+    metaData as AutoResizingTextareaBlogMetaData,
+} from "./posts/AutoResizingTextareaBlog";
 
 // Add New Post Here
 export const postMetaDatas = [
@@ -66,6 +69,7 @@ export const postMetaDatas = [
     ReactHooksAdvancedMetaData,
     DevOpsPipelineMetaData,
     CloudNativeAppsMetaData,
+    AutoResizingTextareaBlogMetaData,
 ];
 
 // Add New Post Here
@@ -86,6 +90,7 @@ export const postComponents = {
     "react-hooks-advanced": ReactHooksAdvanced,
     "devops-pipeline": DevOpsPipeline,
     "cloud-native-applications-guide": CloudNativeApps,
+    "auto-resizing-textareas": AutoResizingTextareaBlog,
 };
 
 export const blogPosts: BlogPost[] = [];
