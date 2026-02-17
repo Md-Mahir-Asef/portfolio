@@ -10,7 +10,6 @@ export const metaData = {
         "Frontend",
         "JavaScript",
         "React",
-        "FullStack",
     ],
     date: "2026-02-15",
     read_time: "5",
