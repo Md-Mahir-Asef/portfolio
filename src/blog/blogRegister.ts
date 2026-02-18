@@ -2,13 +2,20 @@ import type { BlogPost } from "./components/BlogCard";
 import AutoResizingTextareaBlog, {
     metaData as AutoResizingTextareaBlogMetaData,
 } from "./posts/AutoResizingTextareaBlog";
+import VisualAIWorkflowBlog, {
+    metaData as VisualAIWorkflowBlogMetaData,
+} from "./posts/VisualAiWorkflowBuilderWithReactFlow";
 
 // Add New Post Here
-export const postMetaDatas = [AutoResizingTextareaBlogMetaData];
+export const postMetaDatas = [
+    AutoResizingTextareaBlogMetaData,
+    VisualAIWorkflowBlogMetaData,
+];
 
 // Add New Post Here
 export const postComponents = {
     "auto-resizing-textareas": AutoResizingTextareaBlog,
+    "visual-ai-workflow-builder": VisualAIWorkflowBlog,
 };
 
 export const blogPosts: BlogPost[] = [];
